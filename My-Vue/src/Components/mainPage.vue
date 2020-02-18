@@ -26,7 +26,6 @@ export default {
   methods: {
     CalcAge() {
       age = currentYear - Birth;
-      console.log(age);
       this.age = age;
     }
   }
