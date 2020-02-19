@@ -1,17 +1,15 @@
 <template>
-  <div class="wholeWebsite">
+  <div class="jk-container">
     <Header></Header>
-    <main-Page></main-Page>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import mainPage from "./Components/mainPage.vue";
 import Header from "./Shared/Header.vue";
 
 export default {
   components: {
-    mainPage: mainPage,
     Header: Header
   }
 };
