@@ -1,14 +1,16 @@
 <template>
-  <div class="wholeWebsite">
+  <div class="jk-container">
     <Header></Header>
-    <main-Page></main-Page>
-    <Footer :currYear="currYear"></Footer>
+
+    <router-view></router-view>
+
   </div>
 </template>
 
 <script>
-let currYear = 0;
-import mainPage from "./Components/mainPage.vue";
+
+
+
 import Header from "./Shared/Header.vue";
 import Footer from "./Shared/Footer.vue";
 
@@ -20,6 +22,7 @@ export default {
   },
 
   components: {
+
     mainPage: mainPage,
     Header: Header,
     Footer: Footer
@@ -32,6 +35,7 @@ export default {
       currYear = new Date().getFullYear();
       this.currYear = currYear;
     }
+
   }
 };
 </script>
