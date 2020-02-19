@@ -2,13 +2,12 @@
   <div class="wholeWebsite">
     <Header></Header>
     <main-Page></main-Page>
-    <Footer currYear="currYear"></Footer>
+    <Footer :currYear="currYear"></Footer>
   </div>
 </template>
 
 <script>
-let currentYear = new Date().getFullYear();
-
+let currYear = 0;
 import mainPage from "./Components/mainPage.vue";
 import Header from "./Shared/Header.vue";
 import Footer from "./Shared/Footer.vue";
@@ -16,7 +15,7 @@ import Footer from "./Shared/Footer.vue";
 export default {
   data: function() {
     return {
-      currYear: "1982"
+      currYear: "0"
     };
   },
 
@@ -25,10 +24,13 @@ export default {
     Header: Header,
     Footer: Footer
   },
+  created: function() {
+    this.CurrentYears();
+  },
   methods: {
-    currYear() {
-      currYear = currentYear;
-      return currYear;
+    CurrentYears() {
+      currYear = new Date().getFullYear();
+      this.currYear = currYear;
     }
   }
 };
