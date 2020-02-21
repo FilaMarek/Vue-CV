@@ -1,6 +1,20 @@
 @import '_config';
+
+
+body,head,html{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.jk-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
 .jk-container{
-    width: 100vw;
+    width: 100%;
     background-color: $primary2;
     position: relative;
     margin: 0;
@@ -8,6 +22,7 @@
 
     .jk-nav{
         position: absolute;
+        z-index: 3;
         width: 35%;
         height: 60px;
         left: 50%;
