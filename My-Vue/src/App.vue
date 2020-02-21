@@ -1,7 +1,9 @@
 <template>
   <div class="jk-container">
     <Header></Header>
-    <router-view></router-view>
+    <div class="myBasicInfo">
+      <router-view></router-view>
+    </div>
     <Footer :currYear="currYear"></Footer>
   </div>
 </template>
