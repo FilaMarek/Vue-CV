@@ -1,11 +1,27 @@
 @import '_config';
 
+body,html{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  background-color: $main;
+}
 .jk-container {
   width: 100vw;
+  max-width: 100vw;
   position: relative;
   margin: 0;
   padding: 0;
 
+  .jk-content{
+    width: 85%;
+    background-color: $primary;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 576px) {
+      width: 95%;
+    }
+  }
 
   .jk-nav {
     position: absolute;
@@ -22,6 +38,13 @@
     flex-flow: row nowrap;
     -webkit-box-shadow: 0 4px 9px 1px rgba(33, 33, 33, 0.1);
     box-shadow: 0 4px 9px 1px rgba(33, 33, 33, 0.1);
+    z-index: 5;
+    @media (max-width: 768px) {
+      width: 65%;
+    }
+    @media (max-width: 576px) {
+      width: 85%;
+    }
 
     .jk-nav-item {
       position: relative;
@@ -75,19 +98,4 @@
       }
     }
   }
-}
-
-.socialmedia {
-  font-size: 40px;
-  margin-left: 2px;
-}
-
-.myBasicInfo {
-  margin-left: 34%;
-  margin-top: 5%;
-  float: left;
-}
-
-.footer {
-  margin-right: 50%;
 }

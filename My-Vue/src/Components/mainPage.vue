@@ -1,5 +1,5 @@
 <template>
-  <div class="test">
+  <div>
     <img src="../assets/Marek-Fila.jpg" alt />
     <div class="mainView">
       <div class="myImages"></div>
@@ -40,16 +40,25 @@ export default {
 <style>
 div.mainView {
   height: 246px;
-  width: 350px;
+  width: 100%;
   border: 2px solid black;
   float: right;
 }
-
-img {
-  width: 250px;
-  height: 250px;
-  margin-right: 5px;
+.socialmedia {
+  font-size: 40px;
+  margin-left: 2px;
 }
+
+.myBasicInfo {
+  margin-left: 34%;
+  margin-top: 5%;
+  float: left;
+}
+
+.footer {
+  margin-right: 50%;
+}
+
 </style>
 
 

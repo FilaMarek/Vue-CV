@@ -1,9 +1,16 @@
 <template>
-    <h1>Hobbies</h1>
+    <div>
+        <HeaderComponent></HeaderComponent>
+        <p>elo</p>
+    </div>
 </template>
 
 <script>
-export default {
+import HeaderComponent from '../Shared/HeaderComponent.vue';
 
+export default {
+    components:{
+        HeaderComponent: HeaderComponent
+    }
 };
 </script>
