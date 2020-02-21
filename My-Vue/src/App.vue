@@ -1,10 +1,10 @@
 <template>
   <div class="jk-container">
     <Header></Header>
-    <div class="myBasicInfo">
+    <div class="jk-content">
       <router-view></router-view>
+      <Footer :currYear="currYear"></Footer>
     </div>
-    <Footer :currYear="currYear"></Footer>
   </div>
 </template>
 
@@ -13,6 +13,7 @@ let currYear = 0;
 
 import Header from "./Shared/Header.vue";
 import Footer from "./Shared/Footer.vue";
+import HeaderComponent from "./Pages/Shared/HeaderComponent.vue";
 
 export default {
   data: function() {
@@ -23,7 +24,8 @@ export default {
 
   components: {
     Header: Header,
-    Footer: Footer
+    Footer: Footer,
+    hComp: HeaderComponent
   },
   created: function() {
     this.CurrentYears();

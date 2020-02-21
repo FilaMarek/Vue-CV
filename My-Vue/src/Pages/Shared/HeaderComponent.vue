@@ -15,6 +15,7 @@ export default {
         position: relative;
         height: 45vh;
         overflow: hidden;
+        width: 100%;
         img{
             position: absolute;
             left: 0;
