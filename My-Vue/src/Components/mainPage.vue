@@ -1,6 +1,10 @@
 <template>
-  <div class="mainView">
-    <Leftside :age="age"></Leftside>
+  <div class="test">
+    <img src="../assets/Marek-Fila.jpg" alt />
+    <div class="mainView">
+      <div class="myImages"></div>
+      <Leftside :age="age"></Leftside>
+    </div>
   </div>
 </template>
 
@@ -35,9 +39,16 @@ export default {
 
 <style>
 div.mainView {
-  height: 500px;
+  height: 246px;
   width: 350px;
   border: 2px solid black;
+  float: right;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  margin-right: 5px;
 }
 </style>
 

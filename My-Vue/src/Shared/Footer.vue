@@ -1,6 +1,5 @@
-  
 <template>
-  <div class="menu">
+  <div class="footer">
     <p>&copy; {{ currYear }}</p>
   </div>
 </template>
