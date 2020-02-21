@@ -1,8 +1,10 @@
 <template>
   <div class="jk-container">
+    <hComp></hComp>
     <Header></Header>
+
     <div class="jk-content">
-      <router-view></router-view>
+      <router-view style="z-index: 999;"></router-view>
       <Footer :currYear="currYear"></Footer>
     </div>
   </div>
@@ -38,4 +40,6 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+</style>
 
