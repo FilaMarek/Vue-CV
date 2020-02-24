@@ -1,0 +1,115 @@
+@import '_config';
+
+body,html{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  background-color: $main;
+  overflow-x: hidden;
+  font-family: 'Roboto', ;
+  min-height: 110vh;
+}
+.jk-container {
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  .jk-fluid{
+    width: 100%;
+    height: auto;
+  }
+
+  .jk-content{
+    width: 70%;
+    background-color: #fff;
+    margin-left: auto;
+    padding: 20px;
+    border-radius: 9px;
+    margin-right: auto;
+    position: relative;
+    -webkit-box-shadow: 0 3px 21px 1px rgba(33,33,33,0.2);
+    box-shadow: 0 3px 21px 1px rgba(33,33,33,0.2);
+    margin-top: -15vh;
+    @media (max-width: 576px) {
+      width: 95%;
+    }
+  }
+
+  .jk-nav {
+    position: fixed;
+    width: 35%;
+    height: 60px;
+    left: 50%;
+    top: 1%;
+    transform: translateX(-50%);
+    background-color: $main;
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row nowrap;
+    -webkit-box-shadow: 0 4px 9px 1px rgba(33, 33, 33, 0.1);
+    box-shadow: 0 4px 9px 1px rgba(33, 33, 33, 0.1);
+    z-index: 5;
+    @media (max-width: 768px) {
+      width: 65%;
+    }
+    @media (max-width: 576px) {
+      width: 85%;
+    }
+
+    .jk-nav-item {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: all 0.34s;
+      color: $primary2;
+
+      &:after {
+        content: attr(data-href);
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        transition: all 0.2s;
+        background-color: $secondary;
+        color: #fff;
+        opacity: 0;
+        font-size: 11px;
+        padding: 3px 5px 3px 5px;
+        border-radius: 3px;
+        text-align: center;
+        pointer-events: none;
+      }
+
+      &:hover {
+        -webkit-box-shadow: 0 4px 9px 1px rgba(33, 33, 33, 0.1);
+        box-shadow: 0 4px 9px 1px rgba(33, 33, 33, 0.1);
+        background-color: $primary2;
+
+        .jk-icon {
+          color: #fff;
+        }
+
+        &:after {
+          content: attr(data-href);
+          opacity: 0.75;
+          top: 120%;
+        }
+      }
+
+      .jk-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: $primary2;
+        transform: translateX(-50%) translateY(-50%);
+        transition: all 0.2s;
+      }
+    }
+  }
+}
