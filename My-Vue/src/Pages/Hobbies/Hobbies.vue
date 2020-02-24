@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h1>test</h1>
+        <HeaderComponent></HeaderComponent>
+        <p>elo</p>
     </div>
 </template>
 

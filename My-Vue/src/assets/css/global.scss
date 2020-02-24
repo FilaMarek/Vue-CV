@@ -5,7 +5,6 @@ body,html{
   padding: 0;
   box-sizing: content-box;
   background-color: $main;
-  font-family: 'Roboto', ;
 }
 .jk-container {
   width: 100vw;
@@ -14,22 +13,11 @@ body,html{
   margin: 0;
   padding: 0;
 
-  .jk-fluid{
-    width: 100%;
-    height: auto;
-  }
-
   .jk-content{
-    width: 70%;
-    background-color: #fff;
+    width: 85%;
+    background-color: $primary;
     margin-left: auto;
-    padding: 20px;
-    border-radius: 9px;
     margin-right: auto;
-    position: relative;
-    -webkit-box-shadow: 0 3px 21px 1px rgba(33,33,33,0.2);
-    box-shadow: 0 3px 21px 1px rgba(33,33,33,0.2);
-    margin-top: -15vh;
     @media (max-width: 576px) {
       width: 95%;
     }
