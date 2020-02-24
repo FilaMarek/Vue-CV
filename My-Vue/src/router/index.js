@@ -13,32 +13,32 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'Home',
+            name: 'home',
             component: mainPage
         },
         {
             path: '/hobbies',
-            name: 'My hobbies',
+            name: 'hobbies',
             component: Hobbies
         },
         {
             path: '/jobs',
-            name: 'My jobs',
+            name: 'jobs',
             component: Jobs
         },
         {
             path: '/learning',
-            name: 'Learning right now',
+            name: 'learning',
             component: Learning
         },
         {
             path: '/certifications',
-            name: 'My certifications',
+            name: 'certifications',
             component: Certifications
         },
         {
             path: '/projects',
-            name: 'My projects',
+            name: 'projects',
             component: Projects
         }
     ]

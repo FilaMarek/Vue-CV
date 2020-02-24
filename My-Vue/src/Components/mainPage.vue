@@ -1,9 +1,13 @@
 <template>
   <div>
-    <img src="../assets/Marek-Fila.jpg" alt />
-    <div class="mainView">
-      <div class="myImages"></div>
-      <Leftside :age="age"></Leftside>
+    <div class="jk-photo-wrap">
+      <div class="jk-photo">
+        <img src="../assets/Marek-Fila.jpg" class="jk-fluid"/>
+      </div>
+      <div class="jk-photo-content">
+        <div class="myImages"></div>
+        <Leftside :age="age"></Leftside>
+      </div>
     </div>
   </div>
 </template>
@@ -37,28 +41,27 @@ export default {
 };
 </script>
 
-<style>
-div.mainView {
-  height: 246px;
-  width: 100%;
-  border: 2px solid black;
-  float: right;
-}
-.socialmedia {
-  font-size: 40px;
-  margin-left: 2px;
-}
-
-.myBasicInfo {
-  margin-left: 34%;
-  margin-top: 5%;
-  float: left;
-}
-
-.footer {
-  margin-right: 50%;
-}
-
+<style lang="scss">
+  @import '../assets/css/_config.scss';
+  .jk-photo-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: $primary2;
+    
+    .jk-photo{
+      max-width: 45%;
+      width: 45%;
+      clip-path: polygon(0% 0%, 100% 0%, 55% 100%, 0% 100%);
+    }
+    .jk-photo-content{
+      width: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      color: $main;
+    }
+  }
 </style>
 
 

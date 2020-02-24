@@ -5,7 +5,9 @@ body,html{
   padding: 0;
   box-sizing: content-box;
   background-color: $main;
+  overflow-x: hidden;
   font-family: 'Roboto', ;
+  min-height: 110vh;
 }
 .jk-container {
   width: 100vw;
@@ -36,7 +38,7 @@ body,html{
   }
 
   .jk-nav {
-    position: absolute;
+    position: fixed;
     width: 35%;
     height: 60px;
     left: 50%;

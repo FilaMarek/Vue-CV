@@ -1,10 +1,10 @@
 <template>
   <div class="jk-container">
-    <hComp></hComp>
+    <hComp :img="img"></hComp>
     <Header></Header>
 
     <div class="jk-content">
-      <router-view style="z-index: 999;"></router-view>
+      <router-view :key="$route.fullPath"></router-view>
       <Footer :currYear="currYear"></Footer>
     </div>
   </div>
@@ -20,7 +20,8 @@ import HeaderComponent from "./Pages/Shared/HeaderComponent.vue";
 export default {
   data: function() {
     return {
-      currYear: "0"
+      currYear: "0",
+      img: "",
     };
   },
 
@@ -31,12 +32,22 @@ export default {
   },
   created: function() {
     this.CurrentYears();
+    this.updateComponenets();
   },
   methods: {
     CurrentYears() {
       currYear = new Date().getFullYear();
       this.currYear = currYear;
+    },
+    updateComponenets(){
+      let that = this;
+      this.$nextTick(function(){
+        that.img = this.$route.name;
+    })
     }
+  },
+  updated: function (){
+    this.updateComponenets();
   }
 };
 </script>
